@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // break 키워드
+
+            // break 키워드는 switch 조건문이나 반복문에서 강제로 빠져나올 목적으로 사용한다.
+
+            // break 키워드 사용 방법
+            var array = ['string', 10, true, {language: 'javascript'}, function() {alert('javascript')}, undefined, [1, 2, 3]];
+
+            for (var i in array) {
+                alert(array[i]);
+
+                if (!confirm('Do you want to continue?')) {
+                    break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

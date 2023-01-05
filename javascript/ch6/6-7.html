@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // 함수를 사용한 객체 생성
+
+            // 모든 객체를 개별적으로 만드는 것은 비효율적이기 때문에, 함수를 사용하여 다수의 객체를 만들어야 한다.
+
+            // 함수로 객체를 생성하는 방법
+            function  makeStudent(name, math, science, english) {
+                var student = {
+                    name: name,
+                    math: math,
+                    science: science,
+                    english: english,
+                    getSum: function() {
+                        return this.math + this.science + this.english;
+                    },
+                    getAverage: function() {
+                        return this.getSum() / 3;
+                    },
+                    toString: function() {
+                        return `${this.name}\t${this.math}\t${this.science}\t${this.english}`;
+                    }
+                };
+
+                return student;
+            }
+
+            var students = [];
+            students.push(makeStudent('A', 100, 100, 100));
+            students.push(makeStudent('B', 90, 90, 90));
+            students.push(makeStudent('C', 80, 80, 80));
+            students.push(makeStudent('D', 70, 70, 70));
+            students.push(makeStudent('E', 60, 60, 60));
+            students.push(makeStudent('F', 50, 50, 50));
+            students.push(makeStudent('G', 40, 40, 40));
+            students.push(makeStudent('H', 30, 30, 30));
+            students.push(makeStudent('I', 20, 20, 20));
+
+            var output = 'name\tmath\tscience\tenglish\n';
+            for (var i in students) {
+                output += `${students[i].toString()}\n`;
+            }
+
+            alert(output);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

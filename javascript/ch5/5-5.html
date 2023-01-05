@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // 가변 인자 함수
+
+            // 가변 인자 함수는 여러 개의 매개변수 구성을 갖는 함수를 의미한다.
+
+            // 가변 인자 함수를 선언하는 방법
+                // arguments 변수를 사용하는 방법
+                function getSum() {
+                    let length = arguments.length;
+
+                    if (length === 0) {
+                        alert('These are no numbers whatsoever');
+                    } else if (length === 1) {
+                        alert('There is only one number');
+                    } else {
+                        let sum = 0;
+                        for (const e of arguments) {
+                            sum += e;
+                        }
+                        
+                        alert(sum);
+                    }
+                }
+
+                getSum(); // 'There are no numbers whatsoever'
+                getSum(10); // 'There is only one number'
+                getSum(10, 20, 30); // 60
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // while 반복문
+
+            // while 반복문은 조건식이 참이면 내부의 코드를 실행한다.
+            // 조건식이 거짓이면 반복문에서 빠져나온다.
+
+            // while 반복문을 사용하는 방법
+                // 내부에서 조건이 변하는 반복문
+                var cnt = 0;
+                
+                while (cnt < 3) {
+                    cnt++;
+
+                }
+
+                alert(cnt);
+
+                // 외부에서 조건이 변하는 반복문
+                var cps = 0;
+                var startTime = new Date().getTime();
+
+                while (new Date().getTime() < startTime + 1000) {
+                    cps++;
+                }
+
+                alert(cps);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

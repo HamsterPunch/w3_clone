@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // 객체와 배열을 사용한 데이터 관리
+
+            // 여러 개의 객체를 효율적으로 관리하려면 객체들을 배열에 담아야 한다.
+            var students = [];
+            students.push({name: 'A', math: 100, science: 100, english: 100});
+            students.push({name: 'B', math: 90, science: 90, english: 90});
+            students.push({name: 'C', math: 80, science: 80, english: 80});
+            students.push({name: 'D', math: 70, science: 70, english: 70});
+            students.push({name: 'E', math: 60, science: 60, english: 60});
+            students.push({name: 'F', math: 50, science: 50, english: 50});
+            students.push({name: 'G', math: 40, science: 40, english: 40});
+            students.push({name: 'H', math: 30, science: 30, english: 30});
+            students.push({name: 'I', math: 20, science: 20, english: 20});
+            
+            // 객체를 배열에 담아 사용하는 방법
+            for (var i in students) {
+                students[i].getSum = function() {
+                    return this.math + this.science + this.english;
+                };
+
+                students[i].getAverage = function() {
+                    return this.getSum() / 3;
+                };
+            }
+
+            var output = 'name\tsum\taverage\n';
+            for (var i in students) {
+                with (students[i]) {
+                    output += `${name}\t${getSum()}\t${getAverage()}\n`;
+                }
+            }
+            alert(output);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

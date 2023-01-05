@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // 함수를 리턴하는 함수
+
+            // 자바스크립트에서는 함수도 자료형이기 때문에 리턴 값으로 사용될 수 있다.
+
+            // 함수를 리턴하는 방법
+            function func() {
+                return function func2() {
+                    alert('javascript');
+                };
+            }
+
+            func()(); // 'javascript'
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

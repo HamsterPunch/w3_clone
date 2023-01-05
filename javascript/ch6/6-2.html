@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // 객체의 속성과 메서드
+
+            // 객체의 속성 중 값이 함수인 속성을 메서드라고 한다.
+            // 메서드는 자기 자신이 가진 속성을 출력할 때 반드시 this 키워드를 사용해야 한다.
+
+            // 메서드를 선언하는 방법
+            var obj = {
+                str: 'string',
+                num: 10,
+                bool: true,
+                obj: {},
+                func: function() {alert(`str: ${this.str}`)},
+                'undefined': undefined
+            }
+
+            // 메서드를 호출하는 방법
+            obj.method();
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

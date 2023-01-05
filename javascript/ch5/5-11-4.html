@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // 숫자 확인 함수 - 자바스크립트 내장 함수
+
+            // 숫자 확인 함수는 숫자 자료형 중 Infinity와 NaN 같은 특별한 숫자를 확인하는 함수를 의미한다.
+
+            // isFinite() 함수
+                // isFinite() 함수를 사용하는 방법
+                var num = 1 / 0;
+                alert(isFinite(num)); // false
+
+            // isNaN() 함수
+                // isNaN() 함수를 사용하는 방법
+                var num = String('javascript');
+                alert(isNaN(num)); // true
+
+            // 무한을 나타내는 변수는 양의 무한인 Infinity와 음의 무한인 -Infinity가 있다.
+            var num = -1 / 0;
+            (num == -Infinity) ? alert(-Infinity) : alert(Infinity);
+
+            // NaN은 NaN과 비교할 수 없다.
+            var num = String('javascript');
+            (num == NaN) ? alert(true) : alert(false); // false
+            (NaN == NaN) ? alert(true) : alert(false); // false
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

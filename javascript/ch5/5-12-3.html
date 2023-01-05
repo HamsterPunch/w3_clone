@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // 기본 매개변수
+
+            // 기본 매개변수란 함수에 필요한 매개변수가 입력되지 않는 경우를 대비에 매개변수의 기본값을 정하는 것이다.
+
+            // 기본 매개변수를 설정하는 방법
+                // 논리 부정 연산자를 사용하는 방법
+                function func(num1, num2, num3) {
+                    if (!num1) { num1 = 10; }
+                    if (!num2) { num2 = 20; }
+                    if (!num3) { num3 = 30; }
+
+                    alert(`num1: ${num1}, num2: ${num2}, num3: ${num3}`);
+                }
+
+                func();
+
+                // 짧은 조건문을 사용하는 방법
+                function func(num1, num2, num3) {
+                    num1 = num1 || 10;
+                    num2 = num2 || 20;
+                    num3 = num3 || 30;
+
+                    alert(`num1: ${num1}, num2: ${num2}, num3: ${num3}`);
+                }
+
+                func();
+
+                // ECMAScript 6의 문법을 사용하는 방법
+                function func(num1 = 10, num2 = 20, num3 = 30) {
+                    alert(`num1: ${num1}, num2: ${num2}, num3: ${num3}`);
+                }
+
+                func();
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

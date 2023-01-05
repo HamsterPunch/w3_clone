@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // 타이머 함수 - 자바스크립트 내장 함수
+
+            // 타이머 함수는 자바스크립트가 자체적으로 제공하는 함수 중 하나이다.
+            
+            // setTimeout() 함수
+                // setTimeout() 함수를 사용하는 방법
+                var func1 = setTimeout(function() {
+                    alert('2 Second Passed');
+                }, 2000);
+
+            // clearTimeout() 함수
+                // clearTimeout() 함수를 사용하는 방법
+                setTimeout(function() {
+                    clearTimeout(func1);
+                }, 1000);
+
+            // setInterval() 함수
+                // setInterval() 함수를 사용하는 방법
+                var func2 = setInterval(function() {
+                    alert('Every 5 Second')
+                }, 5000);
+
+            // clearInterval() 함수
+                // clearInterval() 함수를 사용하는 방법
+                setTimeout(function() {
+                    clearInterval(func2);
+                }, 10000);
+                // setTimeout(clearInterval(func), 10000); 이런 식으로는 사용할 수 없다.
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

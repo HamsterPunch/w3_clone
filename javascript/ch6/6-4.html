@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // 객체 관련 키워드
+
+            // 자바스크립트는 객체와 관련하여 사용할 수 있는 키워드를 제공한다.
+
+            // in 키워드를 사용하는 방법
+            var obj = {
+                str: 'string',
+                num: 10,
+                bool: true,
+                obj: {},
+                func: function() {alert('javscript')},
+                'undefined': undefined
+            }
+
+            'str' in obj; // true
+            'str2' in obj; // false
+
+            // with 키워드를 사용하는 방법
+            var obj = {
+                str: 'string',
+                num: 10,
+                bool: true,
+                obj: {},
+                func: function() {alert('javscript')},
+                'undefined': undefined
+            }
+
+            with (obj) {
+                var output = '';
+                output += `${str}, `;
+                output += `${num}, `;
+                output += `${bool}, `;
+                output += `${obj}, `;
+                output += `${func}, `;
+                output += `${undefined}`;
+            }
+            alert(output);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

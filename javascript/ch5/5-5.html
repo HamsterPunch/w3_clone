@@ -12,21 +12,21 @@
                     let length = arguments.length;
 
                     if (length === 0) {
-                        alert('These are no numbers whatsoever');
+                        alert('No parameter');
                     } else if (length === 1) {
-                        alert('There is only one number');
+                        alert('Only one parameter');
                     } else {
                         let sum = 0;
                         for (const e of arguments) {
                             sum += e;
                         }
-                        
-                        alert(sum);
+
+                        alert(`Sum: ${sum}`);
                     }
                 }
 
-                getSum(); // 'There are no numbers whatsoever'
-                getSum(10); // 'There is only one number'
+                getSum(); // No parameter
+                getSum(10); // Only one parameter
                 getSum(10, 20, 30); // 60
         </script>
     </head>

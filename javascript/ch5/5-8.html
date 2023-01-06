@@ -6,20 +6,34 @@
 
             // 콜백 함수는 다른 함수의 매개변수로 전달되는 함수를 의미한다.
             // 자바스크립트에서는 함수도 자료형이기 때문에 매개변수로 사용될 수 있다.
-            // 선언적 함수와 익명 함수 모두 콜백 함수로 쓰일 수 있다.
+            // 선언적 함수와 익명 함수 모두 콜백 함수로 사용될 수 있다.
 
             // 콜백 함수를 사용하는 방법
-            function func(callback) {
-                for (var i = 0; i < 3; i++) {
-                    callback();
+                // 선언적 함수를 콜백 함수로 사용하는 방법
+                function func(callback) {
+                    for (var i = 0; i < 3; i++) {
+                        callback();
+                    }
                 }
-            }
 
-            function func2() {
-                alert('javascript');
-            }
+                function func2() {
+                    alert('javascript');
+                }
 
-            func(func2);
+                func(func2);
+
+                // 익명 함수를 콜백 함수로 사용하는 방법
+                function func(callback) {
+                    for (var i = 0; i < 3; i++) {
+                        callback();
+                    }
+                }
+
+                var func3 = function() {
+                    alert('javascript');
+                }
+                
+                func(func3);
         </script>
     </head>
     <body>

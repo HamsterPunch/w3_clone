@@ -4,32 +4,33 @@
         <script>
             // 함수에서의 전개 연산자 - ECMAScript 6
 
+            // 전개 연산자는 다수의 자료에 패킹과 언패킹을 하기 위한 연산자를 의미한다.
             // 전개 연산자는 함수와 배열에 적용할 수 있다.
 
             // 전개 연산자를 사용하는 방법
                 // 함수를 선언할 때 사용하는 방법
                 function func(...nums) {
-                    alert(`num1: ${nums[0]}, num2: ${nums[1]}, num3: ${nums[2]}`);
+                    alert(`num1: ${nums[0]}\nnum2: ${nums[1]}\nnum3: ${nums[2]}`);
                 }
                 func(10, 20, 30);
 
                 function func2(num1, num2, ...nums) {
-                    alert(`num1: ${num1}, num2: ${num2}, nums: ${nums}`)
+                    alert(`num1: ${num1}\nnum2: ${num2}\nnums: ${nums}`);
                 }
-                func2(10, 20, 30, 40, 50);
+                func2(10, 20, 30, 40, 50)
 
                 // 함수를 호출할 때 사용하는 방법
                 var array = [10, 20, 30];
-                function func(num1, num2, num3) {
-                    alert(`num1: ${num1}, num2: ${num2}, num3: ${num3}`);
+                function func3(num1, num2, num3) {
+                    alert(`num1: ${num1}\nnum2: ${num2}\nnum3: ${num3}`);
                 }
-                func(...array);
+                func3(...array);
 
                 var array = [10, 20, 30];
-                function func2(num1, num2, num3, num4, num5) {
-                    alert(`num1: ${num1}, num2: ${num2}, num3: ${num3}, num4: ${num4}, num5: ${num5}`);
+                function func4(num1, num2, num3, num4, num5) {
+                    alert(`num1: ${num1}\nnum2: ${num2}\nnum3: ${num3}\nnum4: ${num4}\nnum5: ${num5}`);
                 }
-                func2(10, 20, ...array);
+                func4(10, 20, ...array);
         </script>
     </head>
     <body>

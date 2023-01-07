@@ -4,18 +4,24 @@
         <script>
             // 전개 연산자를 사용한 배열 테크닉 - ECMAScript 6
 
-            // ECMAScript 6부터 도입된 전개 연산자를 사용하면 객체 자료형 중 배열을 쉽게 값 복사할 수 있다.
+            // ECMAScript 6부터 도입된 전개 연산자를 사용하면 배열을 쉽게 값 복사하거나 병합할 수 있다.
 
             // 전개 연산자로 배열을 값 복사하는 방법
             var originalArray = [10, 20, 30];
             var newArray = [...originalArray];
 
-            // 전게 연산자로 배열을 병합하는 방법
-            var originalArray = [10, 20, 30];
-            var originalArray2 = [40, 50, 60];
+            originalArray[0] = 40;
 
-            var newArray = [...originalArray, ...originalArray2];
-            alert(newArray);
+            alert(`originalArray: ${originalArray}`); // 40, 20, 30
+            alert(`newArray: ${newArray}`); // 10, 20, 30
+
+            // 전개 연산자로 배열을 병합하는 방법
+            var arr1 = [10, 20, 30]
+            var arr2 = [40, 50, 60];
+
+            var newArray = [...arr1, ...arr2];
+
+            alert(`newArray: ${newArray}`); // 10, 20, 30, 40, 50, 60
         </script>
     </head>
     <body>

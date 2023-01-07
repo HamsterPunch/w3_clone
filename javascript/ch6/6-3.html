@@ -4,22 +4,23 @@
         <script>
             // 객체와 반복문
 
-            // 객체의 속성은 for in 반복문을 사용해야 접근할 수 있다. for 반복문은 사용할 수 없다.
+            // 객체의 속성은 for in 반복문을 사용해야 접근할 수 있다.
+            // for 반복문이나 for of 반복문은 사용할 수 없다.
 
             // 객체의 속성에 접근하는 방법
-                // for in 반복문을 사용하는 방법
-                var obj = {
-                    str: 'string',
-                    num: 10,
-                    bool: true,
-                    obj: {},
-                    func: function() {alert('javscript')},
-                    'undefined': undefined
-                }
+            var obj = {
+                str: 'string',
+                num: 10,
+                bool: true,
+                obj: {language: 'javascript'},
+                'function func': function() {alert(`str: ${this.str}`)},
+                'undefined': undefined,
+                arr: [1, 2, 3]
+            }
 
-                for (var key in obj) {
-                    alert(`${key}: ${obj[key]}`);
-                }
+            for (var key in obj) {
+                alert(`${key}: ${obj[key]}`);
+            }
         </script>
     </head>
     <body>

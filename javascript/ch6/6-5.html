@@ -13,19 +13,24 @@
             obj.str = 'string';
             obj.num = 10;
             obj.bool = true;
-            obj.obj = {};
-            obj['function javascript'] = function() {alert('javascript')},
+            obj.obj = {language: 'javascript'};
+            obj['function func'] = function() {alert(`str: ${this.str}`)};
             obj['undefined'] = undefined;
+            obj.arr = [1, 2, 3];
+
+            for (var key in obj) {
+                alert(`${key}: ${obj[key]}`);
+            }
 
             // 동적으로 속성을 제거하는 방법
-            delete obj['str'];
+            delete obj.str;
             'str' in obj; // false
 
-            delete obj.num;
-            'num' in obj; // false
+            delete obj['function func'];
+            'function func' in obj; // false
 
-            delete (obj.bool);
-            'bool' in obj; // false
+            delete (obj.undefined);
+            'undefined' in obj; // false
         </script>
     </head>
     <body>

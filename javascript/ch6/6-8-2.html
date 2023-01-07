@@ -5,8 +5,8 @@
             // 참조 복사와 값 복사
 
             // 자료형을 복사할 때는 자료형이 무엇이냐에 따라 복사하는 방식이 달라진다.
-            // 숫자 자료형을 복사할 때는 깊은 복사(값 복사)를 사용하여 자료 자체를 복사하고 원본과 복사본이 완전히 독립적인 상태가 되지만,
-            // 객체 자료형을 복사할 때는 얕은 복사(참조 복사)를 사용하여 자료 자체가 아닌 객체의 메모리상 주소인 레퍼런스를 복사하여,
+            // 숫자 자료형을 복사할 때는 값 복사(깊은 복사)를 사용하여 자료 자체를 복사하고 원본과 복사본이 완전히 독립적인 상태가 되지만,
+            // 객체 자료형을 복사할 때는 참조 복사(얕은 복사)를 사용하여 자료 자체가 아닌 객체의 메모리상 주소인 레퍼런스를 복사하여,
             // 원본과 복사본은 같은 레퍼런스를 공유하는 상호 종속적인 상태가 된다.
 
             // 값 복사의 예시
@@ -15,39 +15,52 @@
 
             originalValue = 20;
 
-            alert(`originalValue: ${originalValue}, newValue: ${newValue}`);
+            alert(`originalValue: ${originalValue}`); // 20
+            alert(`newValue: ${newValue}`); // 10
 
             // 참조 복사의 예시
             var originalArray = [10, 20, 30];
             var newArray = originalArray;
 
-            originalArray[0] = 1;
+            originalArray[0] = 40;
 
-            alert(`originalArray: ${originalArray}, newArray: ${newArray}`);
+            alert(`originalArray: ${originalArray}`); // 40, 20, 30
+            alert(`newArray: ${newArray}`); // 40, 20, 30
 
             // 통째로 재선언하거나 재할당하면 새로운 레퍼런스를 갖게 된다.
             originalArray = [0, 0, 0];
-            alert(`originalArray: ${originalArray}, newArray: ${newArray}`);
+
+            alert(`originalArray: ${originalArray}`); // 0, 0, 0
+            alert(`newArray: ${newArray}`); // 40, 20, 30
 
             // 객체를 값 복사하는 방법
-            function clone(obj) {
-                var output = {};
-                for (var i in obj) {
-                    output[i] = obj[i];
+                // 함수를 사용하는 방법
+                function clone(obj) {
+                    var new_obj = {};
+                    for (var key in obj) {
+                        new_obj[key] = obj[key];
+                    }
+
+                    return new_obj;
                 }
-                
-                return output;
-            }
 
-            var originalObj = {num1: 10,  num2: 20};
-            var referenced = originalObj;
-            var cloned = clone(originalObj);
+                var originalObj = {
+                    str: 'string',
+                    num: 10,
+                    bool: true,
+                    obj: {language: 'javascript'},
+                    'function func': function() {alert(`str: ${this.str}`)},
+                    'undefined': undefined,
+                    arr: [1, 2, 3]
+                }
+                var cloned = clone(originalObj)
 
-            originalObj.num2 = 30;
+                originalObj.num = 20;
 
-            alert(JSON.stringify(originalObj, null, 2));
-            alert(JSON.stringify(referenced, null, 2));
-            alert(JSON.stringify(cloned, null, 2));
+                alert(JSON.stringify(originalObj, null, 2));
+                alert(JSON.stringify(cloned, null, 2));
+
+                // 전개 연산자를 사용하는 방법
         </script>
     </head>
     <body>

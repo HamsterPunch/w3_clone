@@ -5,22 +5,23 @@
             // 객체 자료형
 
             // 객체 자료형은 자바스크립트의 자료형 중 하나로, 각 속성은 키-값 페어로 이루어져 있다.
+            // 객체 자료형은 인덱스로 접근할 수 없고, 식별자나 문자열로 된 키를 통해서만 접근할 수 있다.
 
             // 객체 자료형을 생성하는 방법
             var obj = {
                 str: 'string',
                 num: 10,
                 bool: true,
-                obj: {},
+                obj: {language: 'javascript'},
                 'function javascript': function() {alert('javascript')},
-                'undefined': undefined
+                'undefined': undefined,
+                arr: [1, 2, 3]
             }
 
-            // 객체는 인덱스로 접근할 수 없고, 식별자나 문자열로 된 키를 통해서만 접근한다.
-
-            // 객체의 속성에 접근하는 방법
+            // 객체 자료형의 속성에 접근하는 방법
                 // .을 사용하는 방법(문자열로 된 키에는 사용할 수 없다.)
                 obj.str // 'string'
+                // obj.function javascript
                 obj.undefined // undefined
 
                 // []를 사용하는 방법

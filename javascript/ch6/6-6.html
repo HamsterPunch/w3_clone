@@ -15,8 +15,8 @@
             students.push({name: 'G', math: 40, science: 40, english: 40});
             students.push({name: 'H', math: 30, science: 30, english: 30});
             students.push({name: 'I', math: 20, science: 20, english: 20});
-            
-            // 객체를 배열에 담아 사용하는 방법
+
+            // 배열에 담긴 모든 객체에 동적으로 속성을 추가하는 방법
             for (var i in students) {
                 students[i].getSum = function() {
                     return this.math + this.science + this.english;

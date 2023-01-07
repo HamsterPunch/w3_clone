@@ -12,13 +12,14 @@
                 str: 'string',
                 num: 10,
                 bool: true,
-                obj: {},
-                func: function() {alert(`str: ${this.str}`)},
-                'undefined': undefined
+                obj: {language: 'javascript'},
+                'function func': function() {alert(`str: ${this.str}`)},
+                'undefined': undefined,
+                arr: [1, 2, 3]
             }
 
             // 메서드를 호출하는 방법
-            obj.method();
+            obj['function func']();
         </script>
     </head>
     <body>

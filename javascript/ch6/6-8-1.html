@@ -9,27 +9,7 @@
 
             // 함수로 옵션 객체를 초기화하는 방법
                 // 짧은 조건문을 사용하는 방법
-                function  makeStudent(name, math, science, english) {
-                    var student = {
-                        name: name,
-                        math: math,
-                        science: science,
-                        english: english,
-                        getSum: function() {
-                            return this.math + this.science + this.english;
-                        },
-                        getAverage: function() {
-                            return this.getSum() / 3;
-                        },
-                        toString: function() {
-                            return `${this.name}\t${this.math}\t${this.science}\t${this.english}`;
-                        }
-                    };
-
-                    return student;
-                }
-
-                function func(std) {
+                function func1(std) {
                     std.name = std.name || 'Z';
                     std.math = std.math || 0;
                     std.science = std.science || 0;
@@ -37,24 +17,54 @@
 
                     return std;
                 }
-                
-                var students = []
-                students.push(func(makeStudent()));
-                students.push(func(makeStudent()));
-                students.push(func(makeStudent()));
-                students.push(func(makeStudent()));
-                students.push(func(makeStudent()));
-                students.push(func(makeStudent()));
-                students.push(func(makeStudent()));
-                students.push(func(makeStudent()));
-                students.push(func(makeStudent()));
 
-                var output = 'name\tmath\tscience\tenglish\n';
-                for (var i in students) {
-                    output += `${students[i].toString()}\n`;
+                // 논리 부정 연산자를 사용하는 방법
+                function func2(std) {
+                    if (!std.name) { std.name = 'Z'; }
+                    if (!std.math) { std.math = 0; }
+                    if (!std.science) { std.science = 0; }
+                    if (!std.english) { std.english = 0; }
+
+                    return std;
                 }
 
-                alert(output);
+            function makeStudent(name, math, science, english) {
+                var student = {
+                    name: name,
+                    math: math,
+                    science: science,
+                    english: english,
+                    getSum: function() {
+                        return this.math + this.science + this.english;
+                    },
+                    getAverage: function() {
+                        return this.getSum() / 3;
+                    },
+                    toString: function() {
+                        return `${this.name}\t${this.getSum()}\t${this.getAverage()}`;
+                    }
+                }
+
+                return student;
+            }
+
+            var students = [];
+            students.push(func1(makeStudent()));
+            students.push(func1(makeStudent()));
+            students.push(func1(makeStudent()));
+            students.push(func1(makeStudent()));
+            students.push(func2(makeStudent()));
+            students.push(func2(makeStudent()));
+            students.push(func2(makeStudent()));
+            students.push(func2(makeStudent()));
+            students.push(func2(makeStudent()));
+
+            var output = 'name\tmath\tscience\tenglish\n';
+            for (var i in students) {
+                output += `${students[i].toString()}\n`;
+            }
+
+            alert(output);
         </script>
     </head>
     <body>

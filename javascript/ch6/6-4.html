@@ -11,9 +11,10 @@
                 str: 'string',
                 num: 10,
                 bool: true,
-                obj: {},
-                func: function() {alert('javscript')},
-                'undefined': undefined
+                obj: {language: 'javascript'},
+                'function func': function() {alert(`str: ${this.str}`)},
+                'undefined': undefined,
+                arr: [1, 2, 3]
             }
 
             'str' in obj; // true
@@ -24,21 +25,21 @@
                 str: 'string',
                 num: 10,
                 bool: true,
-                obj: {},
-                func: function() {alert('javscript')},
-                'undefined': undefined
+                obj: {language: 'javascript'},
+                'function func': function() {alert(`str: ${this.str}`)},
+                'undefined': undefined,
+                arr: [1, 2, 3]
             }
 
             with (obj) {
-                var output = '';
-                output += `${str}, `;
-                output += `${num}, `;
-                output += `${bool}, `;
-                output += `${obj}, `;
-                output += `${func}, `;
-                output += `${undefined}`;
+                alert(`str: ${str}`);
+                alert(`num: ${num}`);
+                alert(`bool: ${bool}`);
+                alert(`obj: ${obj}`);
+                // alert(`function func: ${function func}`); // with 키워드로는 키가 문자열로 된 속성에 접근할 수 없다.
+                alert(`undefined: ${undefined}`);
+                alert(`arr: ${arr}`);
             }
-            alert(output);
         </script>
     </head>
     <body>

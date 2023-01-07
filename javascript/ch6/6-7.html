@@ -4,10 +4,10 @@
         <script>
             // 함수를 사용한 객체 생성
 
-            // 모든 객체를 개별적으로 만드는 것은 비효율적이기 때문에, 함수를 사용하여 다수의 객체를 만들어야 한다.
+            // 모든 객체를 개별적으로 생성하는 것은 비효율적이기 때문에, 함수를 사용하여 다수의 객체를 생성해야 한다.
 
             // 함수로 객체를 생성하는 방법
-            function  makeStudent(name, math, science, english) {
+            function makeStudent(name, math, science, english) {
                 var student = {
                     name: name,
                     math: math,
@@ -17,10 +17,10 @@
                         return this.math + this.science + this.english;
                     },
                     getAverage: function() {
-                        return this.getSum() / 3;
+                        return this.getSum() / 3
                     },
                     toString: function() {
-                        return `${this.name}\t${this.math}\t${this.science}\t${this.english}`;
+                        return `${this.name}\t${this.getSum()}\t${this.getAverage()}`;
                     }
                 };
 

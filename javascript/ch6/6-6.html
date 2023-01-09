@@ -4,7 +4,7 @@
         <script>
             // 객체와 배열을 사용한 데이터 관리
 
-            // 여러 개의 객체를 효율적으로 관리하려면 객체들을 배열에 담아야 한다.
+            // 여러 개의 객체를 효율적으로 관리하려면 객체들을 배열에 담는 것이 좋다.
             var students = [];
             students.push({name: 'A', math: 100, science: 100, english: 100});
             students.push({name: 'B', math: 90, science: 90, english: 90});
@@ -25,14 +25,19 @@
                 students[i].getAverage = function() {
                     return this.getSum() / 3;
                 };
+
+                students[i].toString = function() {
+                    return `${this.name}\t${this.getSum()}\t${this.getAverage()}\n`;
+                };
             }
 
             var output = 'name\tsum\taverage\n';
             for (var i in students) {
                 with (students[i]) {
-                    output += `${name}\t${getSum()}\t${getAverage()}\n`;
+                    output += toString();
                 }
             }
+
             alert(output);
         </script>
     </head>

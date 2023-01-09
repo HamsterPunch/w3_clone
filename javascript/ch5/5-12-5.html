@@ -8,25 +8,34 @@
             // 전개 연산자는 함수와 배열에 적용할 수 있다.
 
             // 전개 연산자를 사용하는 방법
-                // 함수를 선언할 때 사용하는 방법
-                function func(...nums) {
-                    alert(`num1: ${nums[0]}\nnum2: ${nums[1]}\nnum3: ${nums[2]}`);
+                // 함수를 선언할 때 사용하는 방법(패킹)
+                function func1(...nums) {
+                    var output = '';
+                    for (var i = 0; i < nums.length; i++) {
+                        output += `num${i}: ${nums[i]}\n`;
+                    }
+
+                    alert(output);
                 }
-                func(10, 20, 30);
+                func1(10, 20, 30);
 
                 function func2(num1, num2, ...nums) {
-                    alert(`num1: ${num1}\nnum2: ${num2}\nnums: ${nums}`);
+                    var output = `num1: ${num1}\nnum2: ${num2}\n`;
+                    for (var i = 0; i < nums.length; i++) {
+                        output += `num${i + 2}: ${nums[i]}\n`;
+                    }
+
+                    alert(output);
                 }
-                func2(10, 20, 30, 40, 50)
+                func2(10, 20, 30, 40, 50);
 
                 // 함수를 호출할 때 사용하는 방법
-                var array = [10, 20, 30];
                 function func3(num1, num2, num3) {
                     alert(`num1: ${num1}\nnum2: ${num2}\nnum3: ${num3}`);
                 }
+                var array = [10, 20, 30];
                 func3(...array);
 
-                var array = [10, 20, 30];
                 function func4(num1, num2, num3, num4, num5) {
                     alert(`num1: ${num1}\nnum2: ${num2}\nnum3: ${num3}\nnum4: ${num4}\nnum5: ${num5}`);
                 }

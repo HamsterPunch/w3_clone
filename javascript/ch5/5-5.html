@@ -8,26 +8,26 @@
 
             // 가변 인자 함수를 선언하는 방법
                 // arguments 변수를 사용하는 방법
-                function getSum() {
+                function func() {
                     let length = arguments.length;
 
                     if (length === 0) {
-                        alert('No parameter');
+                        alert('no parameter');
                     } else if (length === 1) {
-                        alert('Only one parameter');
+                        alert('only one parameter');
                     } else {
                         let sum = 0;
                         for (const e of arguments) {
                             sum += e;
                         }
 
-                        alert(`Sum: ${sum}`);
+                        alert(`sum: ${sum}`);
                     }
                 }
 
-                getSum(); // No parameter
-                getSum(10); // Only one parameter
-                getSum(10, 20, 30); // 60
+                func(); // 'no parameter'
+                func(10); // 'only one parameter'
+                func(10, 20, 30); // 60
         </script>
     </head>
     <body>

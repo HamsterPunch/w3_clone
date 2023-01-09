@@ -5,9 +5,9 @@
             // 참조 복사와 값 복사
 
             // 자료형을 복사할 때는 자료형이 무엇이냐에 따라 복사하는 방식이 달라진다.
-            // 숫자 자료형을 복사할 때는 값 복사(깊은 복사)를 사용하여 자료 자체를 복사하고 원본과 복사본이 완전히 독립적인 상태가 되지만,
+            // 숫자 자료형을 복사할 때는 값 복사(깊은 복사)를 사용하여 자료 자체를 복사하고 원본과 복사본이 서로에게 독립적인 상태가 되지만,
             // 객체 자료형을 복사할 때는 참조 복사(얕은 복사)를 사용하여 자료 자체가 아닌 객체의 메모리상 주소인 레퍼런스를 복사하여,
-            // 원본과 복사본은 같은 레퍼런스를 공유하는 상호 종속적인 상태가 된다.
+            // 원본과 복사본이 같은 레퍼런스를 공유하는 상호 종속적인 상태가 된다.
 
             // 값 복사의 예시
             var originalValue = 10;
@@ -15,8 +15,7 @@
 
             originalValue = 20;
 
-            alert(`originalValue: ${originalValue}`); // 20
-            alert(`newValue: ${newValue}`); // 10
+            alert(`originalValue: ${originalValue}\nnewValue: ${newValue}`);
 
             // 참조 복사의 예시
             var originalArray = [10, 20, 30];
@@ -24,14 +23,12 @@
 
             originalArray[0] = 40;
 
-            alert(`originalArray: ${originalArray}`); // 40, 20, 30
-            alert(`newArray: ${newArray}`); // 40, 20, 30
+            alert(`originalArray: ${originalArray}\nnewArray: ${newArray}`);
 
-            // 통째로 재선언하거나 재할당하면 새로운 레퍼런스를 갖게 된다.
+            // 통째로 재선언하거나 재할당되면 새로운 레퍼런스를 갖게 된다.
             originalArray = [0, 0, 0];
 
-            alert(`originalArray: ${originalArray}`); // 0, 0, 0
-            alert(`newArray: ${newArray}`); // 40, 20, 30
+            alert(`originalArray: ${originalArray}\nnewArray: ${newArray}`);
 
             // 객체를 값 복사하는 방법
                 // 함수를 사용하는 방법
@@ -53,13 +50,13 @@
                     'undefined': undefined,
                     arr: [1, 2, 3]
                 }
-                var cloned = clone(originalObj)
+                var cloned = clone(originalObj);
 
                 originalObj.num = 20;
 
                 alert(JSON.stringify(originalObj, null, 2));
                 alert(JSON.stringify(cloned, null, 2));
-
+                
                 // 전개 연산자를 사용하는 방법
         </script>
     </head>

@@ -12,16 +12,15 @@
 
             originalArray[0] = 40;
 
-            alert(`originalArray: ${originalArray}`); // 40, 20, 30
-            alert(`newArray: ${newArray}`); // 10, 20, 30
-
+            alert(`originalArray: ${originalArray}\nnewArray: ${newArray}`);
+            
             // 전개 연산자로 배열을 병합하는 방법
-            var arr1 = [10, 20, 30]
-            var arr2 = [40, 50, 60];
+            var array1 = [10, 20, 30];
+            var array2 = [40, 50, 60];
 
-            var newArray = [...arr1, ...arr2];
+            var newArray = [...array1, ...array2];
 
-            alert(`newArray: ${newArray}`); // 10, 20, 30, 40, 50, 60
+            alert(`newArray: ${newArray}`);
         </script>
     </head>
     <body>

@@ -6,12 +6,11 @@
 
             // 하나의 조건에 대한 참 또는 거짓에 대응한다.
 
-            // 짧은 조건문 사용 방법
-            var date = new Date();
-            var hour = date.getHours();
+            // 짧은 조건문을 사용하는 방법
+            var hour = new Date().getHours();
 
             hour < 12 && alert('before noon');
-            
+
             hour < 12 || alert('after noon');
         </script>
     </head>

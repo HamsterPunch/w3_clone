@@ -15,10 +15,10 @@
                 'function func': function() {alert(`str: ${this.str}`)},
                 'undefined': undefined,
                 arr: [1, 2, 3]
-            }
+            };
 
-            'str' in obj; // true
-            'str2' in obj; // false
+            'str' in obj // true
+            'str2' in obj // false
 
             // with 키워드를 사용하는 방법
             var obj = {
@@ -29,16 +29,16 @@
                 'function func': function() {alert(`str: ${this.str}`)},
                 'undefined': undefined,
                 arr: [1, 2, 3]
-            }
+            };
 
             with (obj) {
-                alert(`str: ${str}`);
-                alert(`num: ${num}`);
-                alert(`bool: ${bool}`);
-                alert(`obj: ${obj}`);
-                // alert(`function func: ${function func}`); // with 키워드로는 키가 문자열로 된 속성에 접근할 수 없다.
-                alert(`undefined: ${undefined}`);
-                alert(`arr: ${arr}`);
+                alert(`str: ${str}`); // 'string'
+                alert(`num: ${num}`); // 10
+                alert(`bool: ${bool}`); // true
+                alert(`obj: ${obj}`); // [object Object]
+                // alert(`function func: ${function func}`); // with 키워드로는 키가 문자열인 속성에 접근할 수 없다.
+                alert(`undefined: ${undefined}`); // undefined
+                alert(`arr: ${arr}`); // 1, 2, 3
             }
         </script>
     </head>

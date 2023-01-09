@@ -5,18 +5,18 @@
             // 내부 함수
 
             // 내부 함수는 다른 함수의 내부에서 선언된 함수를 의미한다.
-            
-            // 내부 함수를 선언하는 방법
-            function func2(num) {
-                return num + num;
-            }
 
-            function func(width, height) {
-                function func2(num) {
+            // 내부 함수를 선언하는 방법
+            function func(num1, num2) {
+                function inner_func(num) {
                     return num * num;
                 }
 
-                return func2(width) + func2(height);
+                return inner_func(num1) + inner_func(num2);
+            }
+
+            function inner_func(num) {
+                return num * 10;
             }
 
             alert(func(10, 20)); // 500

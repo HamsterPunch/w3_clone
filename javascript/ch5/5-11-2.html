@@ -8,35 +8,29 @@
             // 인코딩은 문자를 저장하거나 송신할 것을 목적으로 부호화하는 것을 의미한다.
             // 디코딩은 인코딩된 문자를 로드하거나 수신할 목적으로 복호화하는 것을 의미한다.
 
-            // escape() 함수
-                // escape() 함수를 사용하는 방법
-                var URI = 'https://www.naver.com/자바스크립트';
-                alert(`encode: ${escape(URI)}`);
+            // escape() 함수를 사용하는 방법
+            var URI = 'https://www.naver.com/자바스크립트';
+            alert(`escape: ${escape(URI)}`); // https%3A//www.naver.com/%uC790%uBC14%uC2A4%uD06C%uB9BD%uD2B8
 
-            // unescape() 함수
-                // unescape() 함수를 사용하는 방법
-                var escape_URI = escape(URI);
-                alert(`unescape: ${unescape(escape_URI)}`);
+            // unescape() 함수를 사용하는 방법
+            var escaped = escape(URI);
+            alert(`unescape: ${unescape(escaped)}`); // https://www.naver.com/자바스크립트
 
-            // encodeURI() 함수
-                // encodeURI() 함수를 사용하는 방법
-                var URI = 'https://www.naver.com/자바스크립트';
-                alert(`encodeURI: ${encodeURI(URI)}`);
+            // encodeURI 함수를 사용하는 방법
+            var URI = 'https://www.naver.com/자바스크립트';
+            alert(`encodeURI: ${encodeURI(URI)}`); // https://www.naver.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8
 
-            // decodeURI() 함수
-                // decodeURI() 함수를 사용하는 방법
-                var encode_URI = encodeURI(URI);
-                alert(`decodeURL: ${decodeURI(encode_URI)}`);
+            // decodeURI 함수를 사용하는 방법
+            var encoded = encodeURI(URI);
+            alert(`decodeURI: ${decodeURI(encoded)}`); // https://www.naver.com/자바스크립트
 
-            // encodeURIComponent() 함수
-                // encodeURIComponent() 함수를 사용하는 방법
-                var URI = 'https://www.naver.com/자바스크립트';
-                alert(`encodeURIComponent: ${encodeURIComponent(URI)}`);
+            // encodeURIComponent() 함수를 사용하는 방법
+            var URI = 'https://www.naver.com/자바스크립트';
+            alert(`encodeURIComponent: ${encodeURIComponent(URI)}`); // 
 
-            // decodeURLComponent() 함수
-                // decodeURLComponent() 함수를 사용하는 방법
-                var encodeURIComponent_URI = encodeURIComponent(URI);
-                alert(`decodeURIComponent: ${decodeURIComponent(encodeURIComponent_URI)}`);
+            // decodeURIComponent() 함수를 사용하는 방법
+            var encoded = encodeURIComponent(URI);
+            alert(`decodeURIComponent: ${decodeURIComponent(encoded)}`); // 
         </script>
     </head>
     <body>

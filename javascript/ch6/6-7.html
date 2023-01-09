@@ -17,7 +17,7 @@
                         return this.math + this.science + this.english;
                     },
                     getAverage: function() {
-                        return this.getSum() / 3
+                        return this.getSum() / 3;
                     },
                     toString: function() {
                         return `${this.name}\t${this.getSum()}\t${this.getAverage()}`;
@@ -38,7 +38,7 @@
             students.push(makeStudent('H', 30, 30, 30));
             students.push(makeStudent('I', 20, 20, 20));
 
-            var output = 'name\tmath\tscience\tenglish\n';
+            var output = 'name\tsum\taverage\n';
             for (var i in students) {
                 output += `${students[i].toString()}\n`;
             }

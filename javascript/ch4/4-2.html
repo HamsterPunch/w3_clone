@@ -6,17 +6,17 @@
 
             // 배열을 생성하는 방법
                 // Array() 함수를 사용하는 방법
-                var array = Array('string', 10, true, {language: 'javascript'}, function() {alert('javascript')}, undefined, [1, 2, 3]);
+                var array = Array('string', 10, true, {language: 'javascript'}, function() {alert('str: string')}, undefined, [1, 2, 3]);
 
                 // []를 사용하는 방법
-                var array = ['string', 10, true, {language: 'javascript'}, function() {alert('javascript')}, undefined, [1, 2, 3]];
+                var array = ['string', 10, true, {language: 'javascript'}, function() {alert('str: string')}, undefined, [1, 2, 3]];
 
             // 배열은 인덱스로 조회한다.
             alert(array[0]); // 'string'
             alert(array[1]); // 10
             alert(array[2]); // true
             alert(array[3]); // [object Object]
-            alert(array[4]); // function() {alert('javascript')}
+            alert(array[4]); // function() {alert('str: string')}
             alert(array[5]); // undefined
             alert(array[6]); // 1, 2, 3
         </script>

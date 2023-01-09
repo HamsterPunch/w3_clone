@@ -10,20 +10,9 @@
 
             // 익명 함수를 선언하는 방법
             var func = function() {
-                var str_input = prompt('Please enter a number', '');
-                var num_input = Number(str_input);
+                var num = 10;
 
-                switch (num_input % 2) {
-                    case 0:
-                        alert('Even Number');
-                        break;
-                    case 1:
-                        alert('Odd Number');
-                        break;
-                    default:
-                        alert('Not an Even nor Odd Number');
-                        break;
-                }
+                alert(num);
             }
 
             func();

@@ -6,9 +6,9 @@
 
             // 기본 매개변수란 함수에 필요한 매개변수가 입력되지 않는 경우에 대비해 지정된 매개변수의 기본값을 의미한다.
 
-            // 기본 매개변수를 지정하는 방법
+            // 함수에 기본 매개변수를 지정하는 방법
                 // 논리 부정 연산자를 사용하는 방법
-                function func(num1, num2, num3) { // 0도 false로 변환되는 단점이 있다.
+                function func1(num1, num2, num3) { // 0도 false로 변환되는 단점이 있다.
                     if (!num1) { num1 = 10; }
                     if (!num2) { num2 = 20; }
                     if (!num3) { num3 = 30; }
@@ -16,7 +16,7 @@
                     alert(`num1: ${num1}\nnum2: ${num2}\nnum3: ${num3}`);
                 }
 
-                func();
+                func1(0, 0);
 
                 // 짧은 조건문을 사용하는 방법
                 function func2(num1, num2, num3) { // 0도 false로 변환되는 단점이 있다.
@@ -27,14 +27,14 @@
                     alert(`num1: ${num1}\nnum2: ${num2}\nnum3: ${num3}`);
                 }
 
-                func2();
+                func2(0, 0);
 
                 // ECMAScript 6의 문법을 사용하는 방법
                 function func3(num1 = 10, num2 = 20, num3 = 30) {
                     alert(`num1: ${num1}\nnum2: ${num2}\nnum3: ${num3}`);
                 }
 
-                func3(0);
+                func3(0, 0);
         </script>
     </head>
     <body>

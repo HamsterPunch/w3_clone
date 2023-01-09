@@ -8,17 +8,21 @@
 
             // isFinite() 함수를 사용하는 방법
                 // 무한대의 표현은 양의 무한인 Infinity와 음의 무한인 -Infinity가 있다.
+                var num = 0;
+                alert(isFinite(num)); // true
+
                 var num = 1 / 0;
-                alert(isFinite(num)); // false
                 alert(num); // Infinity
+                alert(isFinite(num)); // false
 
                 var num = -1 / 0;
-                alert(isFinite(num)); // false
                 alert(num); // -Infinity
+                alert(isFinite(num)); // false
 
             // isNaN() 함수를 사용하는 방법
                 // NaN은 NaN과 비교할 수 없다.
                 var num = Number('javascript');
+                alert(num); // NaN
                 alert(isNaN(num)); // true
                 (num === NaN) ? alert(true) : alert(false); // false
         </script>
